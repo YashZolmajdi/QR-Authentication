@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
+    <script type="text/javascript" src="js/socket.io.slim.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+</head>
+
+<body>
+    <div class="left">
+        <div class="login">
+
+            <div class="logo">
+                <img src="img/logo.png">
+                <div>- <span>home</span>-</div>
+            </div>
+            <div class="form">
+                <div class="login-options">
+                    <div class="active" onclick="selectLoginOption(0)" id='manual'><img src="img/manual.svg" id='manual-icon'></div><div id='one-step' onclick="selectLoginOption(1)"><img src="img/qr-code-white.svg" id='qr-icon'></div>
+                </div>
+
+                <div class="manual">
+                    <div class="email">
+                        <label>Email</label>
+                        <div>
+                            <input type="text"></input>
+                            <img src="img/user.png">
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="password">
+                        <label>Password</label>
+                        <div>
+                            <input type="password"></input>
+                            <img src="img/key.png">
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                        <input type="checkbox"> Rememeber me
+                    </div>
+                    <br/>
+                    <div class="btn-container">
+                        <a href="#" class="sso">SSO Login</a><!--
+                        --><a href="#" class="login-btn">Login</a>
+                    </div>
+                    <br/>
+                    <div class="forget">
+                        <a href="#">Forget your password?</a>
+                    </div>
+                </div>
+                <div class="one-step" style="display: none;">
+                    <div>Scan the QR-Code with your Plutora app to login</div>
+                    <br/>
+                    <div class="qr-code">
+                        <div id="qrcode"></div>
+                    </div>
+                    <div class="tick">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                    </div>
+                    <br/>
+                    <div class="store">
+                        <div class="info">Dont have the app?</div>
+                        <div class="play-store"><img src="img/play-store.png"></div><!--
+                        --><div class="apple-store"><img src="img/apple-store.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="img/bg-2.png" class="left-bg">
+
+        <div class="footer">
+            <div>Privacy</div>
+            <div>Terms of Service</div>
+            <div>Knowledge Base</div>
+        </div>
+    </div><!--
+	--><div class="right">
+        <div class="info">
+            <table>
+                <tr>
+                    <td><img src="img/rockets.png"></td>
+                    <td>
+                        <label>Multiple projects</label>
+                        <p>Enterprise releases consolidate and integrate the deliverables of multiple projects that have to be time-boxed or synchronised so that they can be tested and released as a whole.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="odd">
+                <tr>
+                    <td><img src="img/calander.png"></td>
+                    <td>
+                        <label>Schedule management</label>
+                        <p>Enterprise releases consolidate and integrate the deliverables of multiple projects that have to be time-boxed or synchronisRelease Manager orchestrates the process for creating and communicating enterprise release schedules within the organization.hat they can be tested and released as a whole.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td><img src="img/gear.png"></td>
+                    <td>
+                        <label>Feature requests</label>
+                        <p>Enterprise releaseRelease Manager enables release managers, implementation managers, and business analysts to allocate feature requests to defined releases.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="odd">
+                <tr>
+                    <td><img src="img/plan.png"></td>
+                    <td>
+                        <label>Roadmaps</label>
+                        <p>System roadmaps are a key to release planning, they represent a common long-term goal for all teams within the enterprise and developing a roadmap is a highly collaborative process.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <img src="img/bg-3.png" class="right-bg">
+
+        <div class="footer">
+            <div class="left-footer">
+                <img src="img/facebook.png" />
+                <img src="img/linkedin.png" />
+                <img src="img/twitter.png" />
+            </div>
+            <div class="right-footer">
+                <div><img src="img/plutora-white.png" /></div>
+                <div>© 2011 - 2016 Plutora, Inc. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+    <div class="back">
+        <div>Hello, <strong id="username"></strong></div>
+    </div>
+</body>
+
+</html>
